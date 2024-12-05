@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="ams">Welcome</h1>
+    <button onclick="changename()">Add Name</button>
+    <button onclick="clear()">Clear</button>
+
+    <script>
+      //   function clear() {
+      //     let a = document.querySelector("h1");
+      //     a.innerHTML = "kumar";
+      //   }
+
+      function changename() {
+        let x = document.querySelector("h1");
+        let name = prompt("Enter your name");
+        localStorage.setItem("username", name);
+        x.innerHTML = localStorage.getItem("username");
+      }
+    </script>
+  </body>
+</html>
